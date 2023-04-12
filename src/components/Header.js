@@ -53,11 +53,12 @@ const Header = () => {
               </Nav.Link>
               <Link
                 to="/cart"
+                style={{textDecoration:"none",gap:'5px'}}
                 className={`${darkMode? 'text-dark-primary': 'text-light-primary'} d-flex align-items-center`}
               >
-                <BiCart size="2rem"/>
-                {!isEmpty && <span style={{ position: 'relative', left: '-21px', top: '-18px'}}>{totalItems}</span>}
-                <span style={{ marginLeft: !isEmpty ? '-13px': 0}}>&nbsp;Cart</span>
+                <BiCart style={{textDecoration:"none"}} size="2rem"/>
+                {!isEmpty && <span style={{ position: 'relative', left: '-11px', top: '13px',color:"white",width:"23px",height:"25px",background:"red",borderRadius:"50px",textAlign:"center"}}>{totalItems}</span>}
+                <span style={{ marginLeft: !isEmpty ? '-13px': 0,}}></span>
               </Link>
               <Link to="my-account" className={`nav-link ${darkMode? 'text-dark-primary': 'text-light-primary'}`}>
                   <VscAccount size="1.8rem"/>
