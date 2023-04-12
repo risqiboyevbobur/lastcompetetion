@@ -11,7 +11,7 @@ const Home = () => {
     const [productData, setProductData] = useState([]);
 
     async function getResponse(){
-        const res = await fetch('http://localhost:3000/data')
+        const res = await fetch('https://easy-ecartproject.onrender.com/data')
                           .then(res=> res.json());
                           setProductData(await res);
     }
