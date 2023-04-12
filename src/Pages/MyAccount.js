@@ -9,7 +9,6 @@ import { IoLocationSharp } from 'react-icons/io5';
 import './my-account.css';
 import OrderCard from '../components/OrderCard';
 
-
 const MyAccount = () => {
     const [theme] = useThemeHook();
     return (

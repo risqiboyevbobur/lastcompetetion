@@ -12,7 +12,7 @@ function Create() {
   const handleCreate = (e) => {
     const empData = {title, location, price, img, sale};
     e.preventDefault();
-    fetch("https://easy-ecartproject.onrender.com/data",{
+    fetch("https://dbjsoninserver-production.up.railway.app/data",{
       method:"POST",
       headers:{"content-type":"application/json"},
       body:JSON.stringify(empData)
