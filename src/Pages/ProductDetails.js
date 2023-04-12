@@ -19,7 +19,7 @@ const ProductDetails = (props) => {
 
   const getResponse = async () => {
     const res = await fetch(
-      `http://localhost:3000/data/${props.productId}`
+      `https://dbjsoninserver-production.up.railway.app/data/${props.productId}`
     ).then((res) => res.json());
     setProductData(await res);
   };
