@@ -5,8 +5,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 function Create() {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
-  const [price, setPrice] = useState("");
-  const [sale, setSale] = useState("");
+  const [price, setPrice] = useState();
+  const [sale, setSale] = useState();
   const [img, setImg] = useState("");
   
   const handleCreate = (e) => {
@@ -41,7 +41,7 @@ function Create() {
                   placeholder="Enter name"
                   onChange={(e) => setTitle(e.target.value)}
                 />
-                {title.length < 1 ? (
+                {title?.length < 1 ? (
                   <p style={{ color: "red" }}>Invalid</p>
                 ) : (
                   <p style={{ color: "green" }}>Success</p>
@@ -63,28 +63,28 @@ function Create() {
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Price</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="Enter price"
                   onChange={(e) => setPrice(e.target.value)}
                 />
-                {price.length < 1 ? (
+                {/* {price.length < 1 ? (
                   <p style={{ color: "red" }}>Invalid</p>
                 ) : (
                   <p style={{ color: "green" }}>Success</p>
-                )}
+                )} */}
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasic">
                 <Form.Label>Sale</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="sale"
                   onChange={(e) => setSale(e.target.value)}
                 />
-                {sale.length < 1 ? (
+                {/* {sale.length < 1 ? (
                   <p style={{ color: "red" }}>Invalid</p>
                 ) : (
                   <p style={{ color: "green" }}>Success</p>
-                )}
+                )} */}
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasic">
                 <Form.Label>Image</Form.Label>
